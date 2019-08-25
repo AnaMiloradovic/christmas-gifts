@@ -183,26 +183,6 @@ static void on_mouse(int button, int state, int x, int y) {
 }
 
 
-/*void loadImage() {
-    
-	//Ucitavamo slicicu deda mraza
-	glGenTextures(1, textureNames);
-	Image* image;
-	image = image_init(0, 0);
-
-	image_read(image, "santa.bmp");
-	glBindTexture(GL_TEXTURE_2D, textureNames[0]);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA,
-							 image->width, image->height, 0,
-							 GL_RGBA, GL_UNSIGNED_BYTE, image->pixels);
-
-	image_done(image);
-} */
-
 void resetBlock(int index) {
 	gifts[index].x = dropPosition;
 	gifts[index].y = 20;
@@ -437,32 +417,6 @@ void drawGifts(){
 	}
 }
 
-/*void drawImage() {
-	//Crtamo kvadrat i postavljamo uv koordinate tako da slika moze da se iscrta kako treba
-	glBindTexture(GL_TEXTURE_2D, textureNames[0]);
-	glPushMatrix();
-	glBegin(GL_TRIANGLE_STRIP);
-	glTexCoord2f(0, 0);
-	glVertex2f(-1, -1);
-	glTexCoord2f(0, 1);
-	glVertex2f(-1, 1);
-	glTexCoord2f(1, 0);
-	glVertex2f(1, -1);
-	glTexCoord2f(1, 1);
-	glVertex2f(1, 1);
-	glEnd();
-	glPopMatrix();
-	glBindTexture(GL_TEXTURE_2D, 0);
-} */
-
-// void drawSanta() {
-// 	glPushMatrix();
-// /*	glColor3f(0, 1, 1);*/
-// 	glTranslatef(1, 0, 0);
-// 	drawImage();
-// 	
-// 	glPopMatrix();
-// }
 
 void drawSnowman() {
     
